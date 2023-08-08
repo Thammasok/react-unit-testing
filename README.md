@@ -12,25 +12,34 @@ npm run test
 
 ## โจทย์
 
-1. Calculate
-   1.1 คำนวนหาจำนวนรวมของ 2 จำนวน
-   1.2 Two Sum หาค่ารวม 2ค่า ใน Array ที่ตรงกับ Target
+### Calculate
 
-   ```text
-    Code File: app/services/calculate.ts
+โจทย์ตัวอย่างสำหรับ Simple Unit Testing
 
-    Test Files: app/__test__/calculate.ts
-   ```
+1. คำนวนหาจำนวนรวมของ 2 จำนวน
+2. Two Sum หาค่ารวม 2ค่า ใน Array ที่ตรงกับ Target
 
-2. Loyalty Points
-  ![alt text for screen readers](/public/loyalty-point.png "Text to show on mouseover")
+```text
+ Code File: app/services/calculate.ts
 
-   จะทำ 2 แบบ คือ
-   2.1. Loyalty Points แบบ Simple
-   2.2. Loyalty Points แบบ Dynamic Point Rate (ใช้ Stub/Mock)
-  
-   ```text
-    Code File: app/services/loyalty.ts
+ Test Files: app/__test__/calculate.ts
+```
 
-    Test Files: app/__test__/loyalty.ts
-   ```
+---
+
+### Loyalty Points
+
+โจทย์ตัวอย่างสำหรับ Simple Unit Testing โดยเริ่มต้นจากการออกแบบ Test โดยใช้ Test design techniques (BVA)
+
+![alt text for screen readers](/public/loyalty-point.png "Text to show on mouseover")
+
+จะทำ 2 แบบ คือ
+
+1. Loyalty Points แบบ Simple
+2. Loyalty Points แบบ Dynamic Point Rate (ใช้ Stub/Mock)
+
+  ```text
+  Code File: app/services/loyalty.ts
+
+  Test Files: app/__test__/loyalty.ts
+  ```
