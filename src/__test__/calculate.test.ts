@@ -21,16 +21,30 @@ describe('Calculate service', () => {
     expect(result).toEqual(expected);
   });
 
-  it('ทดสอบการ Return 2 จำนวน', () => {
+  it('ทดสอบการโจทย์ two sum แล้วเจอค่า', () => {
     // Arrange
-    const expected = {
-      msg: 'ok',
-    };
+    const number = [2, 7, 11, 15];
+    const target = 9;
+    const expected: Array<number> = [0, 1];
 
     // Act
-    const result = calculateService.twoRetrun();
+    const result = calculateService.twoSum(number, target);
 
     // Assert
-    expect(result).toMatchObject(expected);
+    // expect(result).toEqual(expect.arrayContaining(expected));
+    expect(result).toEqual(expected);
+  });
+
+  it('ทดสอบการโจทย์ two sum แล้ว ไม่เจอค่า', () => {
+    // Arrange
+    const number = [3, 7, 11, 5];
+    const target = 9;
+    const expected: Array<number> = [];
+
+    // Act
+    const result = calculateService.twoSum(number, target);
+
+    // Assert
+    expect(result).toEqual(expected);
   });
 });
