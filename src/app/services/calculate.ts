@@ -1,6 +1,20 @@
 export class CalculateService {
+  sumAndMinus(numberOne: number, numberTwo: number) {
+    const result = this.sum(numberOne, numberTwo)
+
+    return result - numberOne
+  }
+
   sum(numberOne: number, numberTwo: number): number {
-    return numberOne + numberTwo;
+    console.log('im here!')
+
+    return numberOne + numberTwo
+  }
+
+  twoRetrun() {
+    return {
+      msg: 'ok'
+    }
   }
 
   /**
