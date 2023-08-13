@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, test } from '@jest/globals'
-import { CalculateService } from '../app/services/calculate.class'
+import { CalculateService } from '../app/services/calculate'
 
 describe('Calculate service', () => {
   let calculateService: CalculateService

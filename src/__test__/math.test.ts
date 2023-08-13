@@ -1,8 +1,8 @@
 import { describe, expect } from '@jest/globals'
-import * as aService from '../app/services/sum.function'
-import { addAndMinus } from '../app/services/math.function'
+import * as aService from '../app/services/math/add.func'
+import { addAndMinus } from '../app/services/math'
 
-jest.mock('../app/services/sum.function')
+jest.mock('../app/services/math/add.func')
 
 describe('Math service', () => {
   afterEach(() => {
