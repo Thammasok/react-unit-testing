@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, test } from '@jest/globals'
-import { CalculateService } from '../app/services/calculate'
+import { CalculateService } from '../app/services/calculate.class'
 
 describe('Calculate service', () => {
   let calculateService: CalculateService
@@ -20,7 +20,7 @@ describe('Calculate service', () => {
     const expected = 3
 
     // Act
-    const result = calculateService.sum(numberOne, numberTwo);
+    const result = calculateService.sum(numberOne, numberTwo)
 
     // Assert
     expect(result).toEqual(expected)
@@ -32,11 +32,8 @@ describe('Calculate service', () => {
       msg: 'ok'
     }
 
-
-    
     // Act
     const result = calculateService.twoRetrun()
-
 
     // Assert
     expect(result).toMatchObject(expected)
@@ -47,20 +44,18 @@ describe('Calculate service', () => {
     const numberOne = 1
     const numberTwo = 2
     const expected = 9
-    
-    const mockSumData = 10
-    const mockSum = jest.fn()
 
-    mockSum.mockReturnValue(mockSumData)
+    const mockSumData = 10
+    const mockSum = jest.fn().mockReturnValue(mockSumData)
 
     CalculateService.prototype.sum = mockSum
 
     const result = calculateService.sumAndMinus(numberOne, numberTwo)
-    
+
     expect(result).toEqual(expected)
   })
 
-  it('ทดสอบการ Stub Function โดยใช้ SpyOn', () => {
+  it('ทดสอบการ Stub Function โดยใช้ SpyOn Class', () => {
     // Arrange
     const numberOne = 1
     const numberTwo = 2
@@ -76,5 +71,4 @@ describe('Calculate service', () => {
     expect(spy).toHaveBeenCalled()
     expect(isSum).toBe(expected)
   })
-
 })

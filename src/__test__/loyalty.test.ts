@@ -1,4 +1,4 @@
-import { calculatePointByPrice, calculatePointRateByPrice } from '../app/services/loyalty'
+import { calculatePointByPrice, calculatePointRateByPrice } from '../app/services/loyalty.function'
 
 describe('1: Loyalty service: ทดสอบฟังก์ชันคำนวนแต้มจากราคาสินค้า Point Rate แบบ Fix', () => {
   it('1. ราคาสินค้าที่ซื้อเท่ากับ 50 บาท ได้แต้ม 0 แต้ม', () => {
