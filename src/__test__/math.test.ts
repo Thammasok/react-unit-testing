@@ -1,6 +1,6 @@
 import { describe, expect } from '@jest/globals'
 import * as aService from '../app/services/math/add.func'
-import { addAndMinus } from '../app/services/math'
+import * as math from '../app/services/math'
 
 jest.mock('../app/services/math/add.func')
 
@@ -18,7 +18,7 @@ describe('Math service', () => {
 
     // ใช้ spyOn ในการทำ Mock / Stub ได้
     const spy = jest.spyOn(aService, 'add').mockReturnValue(10)
-    const isSum = addAndMinus(numberOne, numberTwo)
+    const isSum = math.addAndMinus(numberOne, numberTwo)
 
     // Assert
     expect(spy).toHaveBeenCalled()
@@ -35,7 +35,7 @@ describe('Math service', () => {
 
     addMock.mockReturnValue(20)
 
-    const total = addAndMinus(numberOne, numberTwo)
+    const total = math.addAndMinus(numberOne, numberTwo)
     
     expect(addMock).toHaveBeenCalledTimes(1)
     expect(total).toBe(expected)
